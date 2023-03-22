@@ -1,0 +1,39 @@
+ .popup {
+    display: nones;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+ .popup-content {
+    z-index: inherit;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .popup img {
+    max-width: 40%;
+    max-height: 75%;
+    margin-bottom: 40px;
+    border: black;
+    border-radius: 4px;
+  }
+  
+  .close {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 50px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+  }
+  
