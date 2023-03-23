@@ -69,7 +69,7 @@
 					</div>
 					
 	
-					<input type="submit" class="button" value="Send Message">
+					<button onclick="sendmsg()" class="button" value="Send Message"> Send Message </button>
 					<div ></div>
 					<input type="reset" class="clear_ad" value="Clear">
 					
@@ -84,13 +84,20 @@
 
     
 </body>
-<script src=" https://smtpjs.com/v3/smtp.js"></script>
 <script>
-    function sendmail(){
-		Email.send({}).then(
-	message => alert("Your Message Is Sent Successfully - Copernicus")
-);
-		}
+function sendmsg() {
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const phone = document.getElementById("Phone").value;
+    const message = document.getElementById("subject").value;
+    
+    fetch("https://api.telegram.org/bot6274323164:AAGE9BR35Gyy280UtR5eaEIGOCHyKyIA9tk/sendMessage?chat_id=1287407305&text=" + name + ", " + email + ", " + message + ", " + phone );
+    alert("Message sent successfully");
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("Phone").value = "";
+  }
     </script>
 <script>
     var navLinks= document.getElementById("navLinks");
